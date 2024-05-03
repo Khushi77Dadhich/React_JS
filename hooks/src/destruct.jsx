@@ -10,3 +10,4 @@ const {name, sound} = cat;
 const {name: catName, sound: catsound} = cat;
 const {feedingRequirement: {food, water}} = cat;
 console.log(food);
+
