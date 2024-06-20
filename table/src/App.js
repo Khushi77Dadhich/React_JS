@@ -71,10 +71,13 @@ const product = [{
 
 function App() {
   return(
-    <RegularList
-      items={people}
-      resourse
-    />
+    // <RegularList
+    //   items={people}
+    //   resourse
+    // />
+    <Modal>
+      <
+    </Modal>
   );
 }
 
