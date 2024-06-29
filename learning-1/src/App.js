@@ -56,6 +56,12 @@ function App() {
           >
             Related Resources
           </button>
+          <button
+            className={activeContentIndex === 3 ? "active" : ""}
+            onClick={() => setActiveContentIndex(3)}
+          >
+            Related Resources
+          </button>
         </menu>
         <div>
           <ul>
