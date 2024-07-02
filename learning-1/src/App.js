@@ -77,23 +77,65 @@
 
 // export default App;
 
+const reactDescriptions = ['fundamental', 'Cucial', 'Core'];
 
+function genRandomInt(max) {
+  return Math.floor(Math.random() * (max + 1));
+}
+
+function Header() {
+  const description = reactDescriptions[getRandomInt(2)]
+  return (
+    <header>
+        <img src="src/assets/react-core-concepts.png" alt="Stylized tom" />
+        <h1>React Essentails</h1>
+        <p>
+          {description} React concepts you will need for almost any app you are
+          going to build!
+        </p>
+      </header>
+  )
+}
+
+function CoreConcept() {
+  return (
+    <li>
+      <img src="..." alt="..."/>
+      <h3>Title</h3>
+      <p>Description</p>
+    </li>
+  )
+}
 
 function App() {
   return(
     <div>
-      <header>
-        <img src="src/assets/react-core-concepts.png" alt="Stylized tom" />
-        <h1>React Essentails</h1>
-        <p>
-          Fundamental React concepts you will need for almost any app you are
-          going to build!
-        </p>
-      </header>
+      <Header/>
       <main>
-        <h2>Time to get started!</h2>
+        <section id="core-concept"/>
+        <h2>Core Concepts</h2>
+        <ul>
+          <CoreConcept/>
+          <CoreConcept/>
+          <CoreConcept/>
+        </ul>
       </main>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   );
 }
 
