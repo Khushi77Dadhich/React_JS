@@ -77,6 +77,8 @@
 
 // export default App;
 
+import { CORE_CONCEPTS } from "./data";
+
 const reactDescriptions = ['fundamental', 'Cucial', 'Core'];
 
 function genRandomInt(max) {
@@ -97,14 +99,14 @@ function Header() {
   )
 }
 
-function CoreConcept() {
+function CoreConcept(props) {
   return (
     <li>
-      <img src="..." alt="..."/>
-      <h3>Title</h3>
-      <p>Description</p>
+      <img src={props.image} alt={props.title}/>
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
     </li>
-  )
+  );
 }
 
 function App() {
@@ -115,27 +117,29 @@ function App() {
         <section id="core-concept"/>
         <h2>Core Concepts</h2>
         <ul>
-          <CoreConcept/>
-          <CoreConcept/>
-          <CoreConcept/>
+          <CoreConcept
+            title={CORE_CONCEPTS[0].title}
+            description={CORE_CONCEPTS[0].description}
+            image={CORE_CONCEPTS[0].image}
+          />
+          <CoreConcept
+            title={CORE_CONCEPTS[1].title}
+            description={CORE_CONCEPTS[1].description}
+            image={CORE_CONCEPTS[1].image}
+          />
+          <CoreConcept
+            title={CORE_CONCEPTS[2].title}
+            description={CORE_CONCEPTS[2].description}
+            image={CORE_CONCEPTS[2].image}
+          />
+          <CoreConcept
+            title={CORE_CONCEPTS[3].title}
+            description={CORE_CONCEPTS[3].description}
+            image={CORE_CONCEPTS[3].image}
+          />
         </ul>
       </main>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   );
 }
 
